@@ -1,0 +1,23 @@
+name: Go
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.15
+
+    - name: Run
+      env:
+        CONFIG: ${{ secrets.CONFIG }}
+      run: go run -v ./main.go
