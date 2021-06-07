@@ -1,0 +1,14 @@
+{
+  "login": [
+    {
+      "url": "https://domain.com",
+      "cookie": "uid=xxxx; email=xxxx; key=xxxx; expire_in=xxxx;"
+    },
+    {
+      "url": "https://domain.com",
+      "email": "xxxx@mail.com",
+      "password": "xxxx"
+    }
+  ],
+  "pushPlus": "Push Plus Token"
+}
